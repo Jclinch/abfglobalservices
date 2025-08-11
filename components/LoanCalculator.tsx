@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function LoanCalculator() {
   const [loan, setLoan] = useState(500_000);
@@ -50,7 +51,7 @@ export default function LoanCalculator() {
       </div>
 
       {/* Duration */}
-      <div className="mb-4">
+      <div className="mb-6">
         <label className="block text-sm font-medium text-gray-800 mb-1">
           Duration: <span className="text-blue-700">{duration} Month(s)</span>
         </label>
@@ -64,27 +65,35 @@ export default function LoanCalculator() {
         />
       </div>
 
-      {/* Results */}
-      <div className="grid grid-cols-1 gap-3 text-sm text-center">
-        <div className="bg-white/90 p-3 rounded-md shadow-sm">
-          <p className="text-gray-600">Monthly Pay</p>
-          <p className="font-bold text-green-700 text-lg">
+      {/* Slimmer Results */}
+      <div className="grid grid-cols-3 gap-2 text-xs sm:text-sm text-center mb-4">
+        <div className="bg-white/90 p-2 rounded-md shadow-sm">
+          <p className="text-gray-600 font-bold">Monthly Pay</p>
+          <p className="font-bold text-green-700">
             <AnimatedNumber value={monthlyPay} />
           </p>
         </div>
 
-        <div className="bg-white/90 p-3 rounded-md shadow-sm">
-          <p className="text-gray-600">Term</p>
-          <p className="font-bold text-blue-700 text-lg">{duration} Month(s)</p>
+        <div className="bg-white/90 p-2 rounded-md shadow-sm">
+          <p className="text-gray-600 font-bold">Term</p>
+          <p className="font-bold text-blue-700">{duration} Month(s)</p>
         </div>
 
-        <div className="bg-white/90 p-3 rounded-md shadow-sm">
-          <p className="text-gray-600">Total Payback</p>
-          <p className="font-bold text-red-700 text-lg">
+        <div className="bg-white/90 p-2 rounded-md shadow-sm">
+          <p className="text-gray-600 font-bold">Total Payback</p>
+          <p className="font-bold text-red-700">
             <AnimatedNumber value={totalPayback} />
           </p>
         </div>
       </div>
+
+      {/* Apply Now Button */}
+      <Link
+        href="/contact"
+        className="block w-full text-center px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold rounded-lg shadow transition-all"
+      >
+        Apply Now
+      </Link>
     </div>
   );
 }

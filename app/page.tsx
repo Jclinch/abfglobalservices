@@ -1,4 +1,4 @@
-"use client";
+//app\page.tsx
 import Hero from '@/components/Hero';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import MissionVisionServices from '@/components/MissionVisionServices';
@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <main>
-        <div className="mt-[-60px]">
+        <div className="">
          <Hero />
         </div>
         <MissionVisionServices />

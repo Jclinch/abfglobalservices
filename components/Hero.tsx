@@ -83,7 +83,7 @@ import LoanCalculator from './LoanCalculator';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[757px] w-full overflow-hidden bg-black">
+    <section className="relative min-h-[757px] w-full overflow-hidden bg-black ">
       {/* Zooming background image */}
       <motion.div
         initial={{ scale: 1 }}
@@ -129,17 +129,18 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        {/* Calculator beside text */}
-        <motion.div
-          className="w-full md:w-1/2"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className='mb-[-370px] mr-[-220px] z-100'>
-          <LoanCalculator />
-          </div>
-        </motion.div>
+        {/* Calculator beside text */} 
+<motion.div
+  initial={{ scale: 0.8, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 0.5 }}
+  className="w-full md:w-1/2 flex justify-center md:justify-end"
+>
+  <div className="w-[90%] max-w-xs md:mr-[-10px] md:mb-[-300px] z-30">
+    <LoanCalculator />
+  </div>
+</motion.div>
+
       </div>
     </section>
   );
