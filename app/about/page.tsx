@@ -179,11 +179,23 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-4">Our Office</h2>
-            <p>5th Floor, Prime Tower Plaza, Lekki Phase 1, Lagos, Nigeria.</p>
+            <p>
+              <span className="font-semibold text-amber-300">
+                Head Office:{" "}
+              </span>
+              5th Floor, Prime Tower Plaza, Lekki Phase 1, Lagos, Nigeria.
+            </p>
+            <p>
+              <span className="font-semibold text-amber-300">
+                Branch Office:{" "}
+              </span>
+              C01 Megamound Shopping Mall, Lekki County Homes Estate, Ikota,
+              Lagos.
+            </p>
             <p className="mt-2">Open Monday – Friday: 9:00 AM – 5:00 PM</p>
           </div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=..."
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d38600.14340010109!2d3.5119552572057344!3d6.4363282889843365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s5th%20Floor%2C%20Prime%20Tower%20Plaza%2C%20Lekki%20Phase%201%2C%20Lagos%2C%20Nigeria.!5e0!3m2!1sen!2sng!4v1755943767730!5m2!1sen!2sng"
             width="100%"
             height="300"
             style={{ border: 0 }}

@@ -5,10 +5,10 @@ import { motion, useInView } from 'framer-motion';
 
 // Mocked stats to animate
 const stats = [
-  { label: 'Clients Served', value: 2500 },
+  { label: 'Clients Served', value: 1500 },
   { label: 'Loans Disbursed', value: 1.8, suffix: 'B' },
-  { label: 'POF Issued', value: 650 },
-  { label: 'Financial Managers', value: 40 },
+  { label: 'POF Issued', value: 350 },
+  { label: 'Financial Managers', value: 25 },
 ];
 
 interface CounterProps {

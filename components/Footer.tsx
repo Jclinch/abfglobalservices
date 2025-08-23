@@ -35,7 +35,7 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
           <p className="text-sm text-gray-300">5th Floor, Prime Tower Plaza, Lekki Phase 1, Lagos, Nigeria.</p>
-          <p className="text-sm text-gray-300 mt-1">Phone: <a href="tel:+2348012345678" className="text-yellow-400">+234 909 777 2183</a></p>
+          <p className="text-sm text-gray-300 mt-1">Phone: <a href="tel:+2348012345678" className="text-yellow-400">+234 807 777 0546</a></p>
           <p className="text-sm text-gray-300 mt-1">Email: <a href="mailto:info@abfglobalservices.com" className="text-yellow-400">info@abfglobalservices.com</a></p>
         </div>
       </div>

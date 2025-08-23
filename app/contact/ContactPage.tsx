@@ -69,7 +69,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info + Form */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 py-8">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 py-8 px-2">
         {/* Contact Info */}
         <motion.div
           className="space-y-6"
@@ -93,7 +93,8 @@ export default function ContactPage() {
 
           <div>
             <p className="font-semibold text-blue-900">📞 Phone</p>
-            <p className="text-gray-700">+234 909 777 2183</p>
+            <p className="text-gray-700">+234 807 777 0546</p>
+            <p className="text-gray-700">+234 909 984 1000</p>
           </div>
 
           <div>
