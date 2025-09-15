@@ -142,7 +142,7 @@ export default function Navbar() {
             ))}
 
             <Link
-              href="/apply-loan"
+              href="/apply"
               className="mt-4 block w-full text-center bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-2 rounded-md shadow-md"
             >
               Apply Now

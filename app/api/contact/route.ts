@@ -1,13 +1,29 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().min(1, { message: "Name is required" }),
+  email: z.string().email({ message: "Invalid email address" }),
+  message: z.string().min(1, { message: "Message is required" }),
+});
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const body = await req.json();
+    const validation = contactSchema.safeParse(body);
 
-    if (!name || !email || !message) {
-      return NextResponse.json({ success: false, error: "All fields required" }, { status: 400 });
+    if (!validation.success) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Invalid input",
+          issues: validation.error.flatten(),
+        },
+        { status: 400 }
+      );
     }
+    const { name, email, message } = validation.data;
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -30,6 +46,9 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true, message: "Message sent" });
   } catch (err) {
     console.error("Contact error:", err);
-    return NextResponse.json({ success: false }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: "Internal Server Error" },
+      { status: 500 }
+    );
   }
 }
