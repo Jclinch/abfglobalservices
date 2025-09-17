@@ -12,6 +12,7 @@ export default function ContactPage() {
     message: "",
   });
   const [status, setStatus] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -22,6 +23,7 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("Sending...");
+    setIsLoading(true);
 
     try {
       const res = await fetch("/api/contact", {
@@ -36,8 +38,11 @@ export default function ContactPage() {
       } else {
         throw new Error("Failed to send");
       }
-    } catch {
+    } catch (error) {
+      console.error("Contact form error:", error);
       setStatus("❌ Failed to send. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -156,9 +161,10 @@ export default function ContactPage() {
 
           <button
             type="submit"
-            className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-md transition duration-200"
+            disabled={isLoading}
+            className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-md transition duration-200 disabled:bg-blue-700 disabled:cursor-not-allowed"
           >
-            Send Message
+            {isLoading ? "Sending..." : "Send Message"}
           </button>
 
           {status && (

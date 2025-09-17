@@ -2,6 +2,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar'; // ✅ Import the navbar
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Navbar /> {/* ✅ Now at the top */}
         <main className="">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

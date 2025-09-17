@@ -1,3 +1,4 @@
+//app\api\apply-loan\route.ts
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -14,6 +15,9 @@ export async function POST(req: Request) {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS, // ✅ now matches .env.local
       },
+      tls: {
+    rejectUnauthorized: false,  // important if host uses self-signed cert
+  },
     });
 
     // ✅ Email to loan desk
