@@ -1,4 +1,4 @@
-//app\contact\ContactPage.tsx
+// app/contact/ContactPage.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -22,7 +22,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus("");
     setIsLoading(true);
 
     try {
@@ -93,7 +93,7 @@ export default function ContactPage() {
           <div>
             <p className="font-semibold text-blue-900">📍 Office Address</p>
             <p className="text-gray-700">
-              5th Floor, Prime Tower Plaza, Lekki Phase 1, Lagos, Nigeria.{" "}
+              5th Floor, Prime Tower Plaza, Lekki Phase 1, Lagos, Nigeria.
             </p>
           </div>
 
@@ -162,9 +162,35 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-md transition duration-200 disabled:bg-blue-700 disabled:cursor-not-allowed"
+            className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-md transition duration-200 disabled:bg-blue-700 disabled:cursor-not-allowed flex justify-center items-center"
           >
-            {isLoading ? "Sending..." : "Send Message"}
+            {isLoading ? (
+              <span className="flex items-center gap-2">
+                <svg
+                  className="animate-spin h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                  ></path>
+                </svg>
+                Sending...
+              </span>
+            ) : (
+              "Send Message"
+            )}
           </button>
 
           {status && (
