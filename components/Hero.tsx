@@ -120,7 +120,7 @@ export default function Hero() {
 
           <p className="mt-6 text-gray-200 text-base md:text-lg lg:text-xl leading-relaxed">
             At <span className="font-semibold text-yellow-400">ABF & Sons Global Services Ltd</span>,
-            we provide proof of funds (POF), instant loans, and personal financial management services — tailored to your needs.
+            we provide proof of funds (POF), instant loans, investment services and personal financial management services — tailored to your needs.
           </p>
 
           <Link href="https://wa.me/c/+2349099841000" target="_blank">
