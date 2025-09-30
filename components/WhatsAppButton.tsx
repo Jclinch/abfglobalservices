@@ -4,7 +4,7 @@ import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
-  const phone = '2349099841000'; // Replace with your WhatsApp number (without leading +)
+  const phone = '2348077770546'; // Replace with your WhatsApp number (without leading +)
   const message = encodeURIComponent('Hello, I’d like to know more about your loan services.');
 
   return (
