@@ -123,7 +123,7 @@ export default function Hero() {
             we provide proof of funds (POF), instant loans, investment services and personal financial management services — tailored to your needs.
           </p>
 
-          <Link href="https://wa.me/c/+2349099841000" target="_blank">
+          <Link href="https://wa.me/+2348077770546" target="_blank">
       <button className="mt-8 px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold rounded-lg transition-all shadow-lg flex items-center gap-2 w-full sm:w-auto">
         <FaWhatsapp className="text-2xl text-green-600" /> 
         Chat With Us on WhatsApp
