@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Logo & Brief */}
         <div>
           <Image
-            src="/abf logo.jpg"
+            src="/logo.jpg"
             alt="Abf & Sons Logo"
             width={160}
             height={40}
@@ -28,6 +28,7 @@ export default function Footer() {
             <li><Link href="/about">About</Link></li>
             <li><Link href="/services">Services</Link></li>
             <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/privacy-policy">Privacy Policy</Link></li>
           </ul>
         </div>
 
